@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.InputBindings>
-        <KeyBinding Command="{Binding BlueCommand}"
+        <KeyBinding Command="local:ColorCommands.RedCommand"
  Key="B"
  Modifiers="Ctrl"/>
-        <KeyBinding Command="{Binding GreenCommand}"
+        <KeyBinding Command="local:ColorCommands.GreenCommand"
  Key="G"
  Modifiers="Ctrl"/>
-        <KeyBinding Command="{Binding RedCommand}"
+        <KeyBinding Command="local:ColorCommands.BlueCommand"
  Key="R"
  Modifiers="Ctrl"/>
     </Window.InputBindings>
