@@ -8,13 +8,13 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.InputBindings>
         <KeyBinding Command="local:ColorCommands.RedCommand"
- Key="B"
+ Key="R"
  Modifiers="Ctrl"/>
         <KeyBinding Command="local:ColorCommands.GreenCommand"
  Key="G"
  Modifiers="Ctrl"/>
         <KeyBinding Command="local:ColorCommands.BlueCommand"
- Key="R"
+ Key="B"
  Modifiers="Ctrl"/>
     </Window.InputBindings>
     <Window.CommandBindings>
@@ -24,6 +24,7 @@
     </Window.CommandBindings>
     
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -34,7 +35,20 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="button"  Grid.Column="1" Grid.Row="1" Content="Press me"/>
+        <Button Name="button" Content="Press me" Grid.Column="1" Grid.Row="1" />
+        <ListBox Name="lb"  Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30px" >
+            <ListBoxItem>Red</ListBoxItem>
+            <ListBoxItem>Green</ListBoxItem>
+            <ListBoxItem>Blue</ListBoxItem>
+        </ListBox>
+        <CheckBox Name="cb" Content="CheckBoxContent" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30px"/>
+        <Menu Grid.Row="0" Height="25" VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <MenuItem Header="Commands" >
+                <MenuItem Header="Red" Command="local:ColorCommands.RedCommand"/>
+                <MenuItem Header="Green" Command="local:ColorCommands.GreenCommand"/>
+                <MenuItem Header="Blue" Command="local:ColorCommands.BlueCommand"/>
+            </MenuItem>
+        </Menu>
         
     </Grid>
 </Window>

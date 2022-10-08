@@ -26,15 +26,36 @@ namespace RoutedCommands
         }
         private void CommandBinding_ExecutedR(object sender, ExecutedRoutedEventArgs e)
         {
-            button.Background = Brushes.Red;
+            var focusedControl = FocusManager.GetFocusedElement(this);
+            var element = focusedControl as Control;
+            element.Background = Brushes.Red;
+            // if (focusedControl is ListBox)
+            // {
+            //     var textBox = focusedControl as ListBox;
+            //     textBox.Background = Brushes.Red;
+            // }
+            // else if (focusedControl is Button)
+            // {
+            //     var button = focusedControl as Button;
+            //     button.Background = Brushes.Red;
+            // }
+            // else if(focusedControl is CheckBox)
+            // {
+            //     var checkbox = focusedControl as CheckBox;
+            //     checkbox.Background = Brushes.Red;
+            // }
         }
         private void CommandBinding_ExecutedG(object sender, ExecutedRoutedEventArgs e)
         {
-            button.Background = Brushes.Green;
+            var focusedControl = FocusManager.GetFocusedElement(this);
+            var element = focusedControl as Control;
+            element.Background = Brushes.Green;
         }
         private void CommandBinding_ExecutedB(object sender, ExecutedRoutedEventArgs e)
         {
-            button.Background = Brushes.Blue;
+            var focusedControl = FocusManager.GetFocusedElement(this);
+            var element = focusedControl as Control;
+            element.Background = Brushes.Blue;
         }
     }
 

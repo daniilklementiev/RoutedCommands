@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\background.jpg" />
+    <None Remove="images\crimea.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\background.jpg" />
+    <Resource Include="images\crimea.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ImageCrimea.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="ImageCrimea.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
